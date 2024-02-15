@@ -30,20 +30,73 @@ header {
 
 nav {
     display: flex;
+    /* position: relative; */
     justify-content: space-between;
+    align-items: center;
+    padding-inline: 16px;
+    padding-block: 8px;
     background-color: var(--color-blue-s);
 }
 .logo img {
-height: 30px;
+    /* Isjeći originalnu sliku */
+height: 40px;
+}
+
+main{
+    padding-top: 70px;
+    background-color: var(--color-dark);
+    color: var(--color-gray-l);
+    height: 100vh;
+
+    display: flex;
+}
+
+.home-page{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-inline: 32px;
+}
+
+.login-btn{
+    background-color: var(--color-purple);
+    border-radius: 40px;
+    padding-block: 8px;
+    padding-inline: 16px;
+    margin-top: 16px;
+
+    font-weight: 500;
+    color:white;
+    border: none;
+    width: 250px;
+}
+
+.login-btn:hover{
+    cursor: pointer;
+    box-shadow: 1px 6px 14px -3px rgba(96,32,128,1);
+}
+
+.right-column{
+    flex:1;
+}
+
+.left-column{
+    flex: 1;
+}
+
+.right-column > img{
+    width: 100%;
+    border-radius: 40px;
+    border: 12px white solid;
 }
 
 .menu {
-list-style-type: none;
-display: flex;
-align-items: center;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
 }
 .menu li {
-margin: 0 15px; 
+    margin: 0 15px; 
 }
 
 .menu a {
@@ -56,15 +109,58 @@ margin: 0 15px;
 }
 
 .menu-icon {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    /* padding: 10px; */
+    
+    background-color: transparent;
+    border: none;
+
 }
 
+.menu-icon:hover{
+    cursor: pointer;
+}
+
+.menu-icon:hover > .bar{
+    background-color: var(--color-gray-d);
+}
+
+.menu-items{
+    list-style-type: none;
+    position: absolute;
+    top: 62px;
+    right: 0px;
+    background-color: var(--color-blue-s);
+    text-align: center;
+    padding: 10px;
+}
+
+.menu-items > li, a{
+    color: var(--color-gray-l);
+    text-decoration: none;
+}
+
+.menu-items > li{
+    padding: 4px 8px;
+}
+
+.menu-items > li > a:hover{
+    color: var(--color-gray-d);
+}
+
+/* .menu-icon:hover .bar {
+    cursor: pointer; 
+   background-color: var(--color-gray-d);
+} */
+
 .bar {
-width: 30px;
-height: 5px;
+width: 24px;
+height: 4px;
 background-color: var(--color-gray-l);
-margin: 5px 0;
+
 border-radius: 10px;
 }
 
+ /* JS CLASSES */
